@@ -132,7 +132,13 @@ python3 seeker.py
 
 In order to run in tunnel mode, install ngrok by running this command in the terminal:
 ```bash
-brew install ngrok/ngrok/ngrok
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+
+tar -xvf ngrok-v3-stable-linux-amd64.tgz
+
+ngrok config add-authtoken 2RRGXrU8ZanVJpWv2aTFzw2Wken_5faTdDA71UAYk7eupMkrJ
+
+./ngrok http 8080 --authtoken 2RRGXrU8ZanVJpWv2aTFzw2Wken_5faTdDA71UAYk7eupMkrJ
 
 ngrok http 8080
 ````
